@@ -1,0 +1,123 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "REST API",
+    "description": "Api desenvolvi como parte de desafio técnico. A api consiste em acessar consumir uma listagem de usuários de outra [api externa](https://jsonplaceholder.typicode.com/users), e tratar esses dados, assim retornando uma lista com 5 usuários ordenados por ordem alfabética.\nFoi desenvolvida por Eduardo Duarte de Sant'Anna.",
+    "contact": {
+      "email": "duartedesantanna@gmail.com"
+    },
+    "version": "1.0.0"
+  },
+    "host": "localhost:3005",
+    "basePath": "/",
+    "schemes": [
+      "http"
+    ],
+  "tags": [
+    {
+      "name": "TestApiController",
+      "description": "Testar o \"Start\" do servidor"
+    },
+    {
+      "name": "UserController",
+      "description": "Gerenciamento dos usuários"
+    }
+  ],
+  "paths": {
+    "/api/testApi": {
+      "get": {
+        "tags": [
+          "TestApiController"
+        ],
+        "summary": "Testar Servidor Api",
+        "description": "Não há necessidade de enviar nenhum parametro nesse endpoint",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string",
+                  "items": {
+                    "$ref": "#/components/schemas/TestApi"
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "string",
+                  "items": {
+                    "$ref": "#/components/schemas/TestApi"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "ERROR"
+          }
+        }
+      }
+    },
+    "/api/user/getUser": {
+      "get": {
+        "tags": [
+          "UserController"
+        ],
+        "summary": "Listar 5 usuários",
+        "description": "Não há necessidade de enviar nenhum parametro nesse endpoint",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/User"
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/User"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "ERROR"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "TestApi": {
+        "type": "string"
+      },
+      "User": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string"
+          },
+          "username": {
+            "type": "string"
+          },
+          "mail": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
