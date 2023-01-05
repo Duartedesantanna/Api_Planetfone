@@ -11,7 +11,7 @@
 ## #Para executar a api basta executar o camando abaixo: 
 
 #### `npm start`
-Sistema configurado apra rodar na porta 3005, caso deseje mudar basta alterar no arquivo .env com a porta que a aplicação irar rodar:
+Sistema configurado para rodar na porta 3005, caso deseje mudar basta alterar no arquivo .env com a porta que a aplicação irar rodar:
 Exemplo: PORT="3030"
 #
 ## #Documentação
