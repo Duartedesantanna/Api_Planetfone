@@ -2,7 +2,7 @@
   "openapi": "3.0.3",
   "info": {
     "title": "REST API",
-    "description": "Api desenvolvi como parte de desafio técnico. A api consiste em acessar consumir uma listagem de usuários de outra [api externa](https://jsonplaceholder.typicode.com/users), e tratar esses dados, assim retornando uma lista com 5 usuários ordenados por ordem alfabética.\nFoi desenvolvida por Eduardo Duarte de Sant'Anna.",
+    "description": "Api desenvolvida como parte de desafio técnico. A api consiste em consumir uma listagem de usuários de outra [api externa](https://jsonplaceholder.typicode.com/users), e tratar esses dados, assim retornando uma lista com 5 usuários ordenados por ordem alfabética.\nFoi desenvolvida por Eduardo Duarte de Sant'Anna.",
     "contact": {
       "email": "duartedesantanna@gmail.com"
     },
